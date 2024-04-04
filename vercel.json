@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "aiq_challange_image_processor/wsgi.py",
+        "use": "@ardnt/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "aiq_challange_image_processor/wsgi.py"
+        }
+    ]
+}
